@@ -67,3 +67,16 @@ const totalYears2 =  inventors.reduce((total,inventors)=> {
 
 },0)
 console.log("totalYears2 = >", totalYears2)
+
+
+
+// 5th sort the inventors by year lived
+
+const oldest = inventors.sort(function(a,b) {
+
+    const lastGuy = a.passed - a.year;
+    const firstGuy = b.passed - b.year;
+    return lastGuy > firstGuy? 1 : -1;
+
+})
+console.table(oldest)
